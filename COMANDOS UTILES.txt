@@ -1,0 +1,16 @@
+COMANDOS UTILES:
+
+Agregar nueva app:
+	- Colocar codigo fuente en ./src/cdr/<NOMBRE_APP>/<NOMBRE_APP>.c
+	- Crear CMakeLists.txt en mismo directorio
+	- Agregar nueva app en ./cmake/configs/nuttx_px4fmu-v2_default.cmake
+
+Cross-Compilar (en raiz de FORK-DRONE):
+make px4fmu-v2_default upload
+
+Conectarse a screen:
+	- Encontrar puerto donde esta conectado con 'ls /dev/tty*'
+	- Conectarse al puerto con 'screen <PUERTO> 57600'
+Ej (suele ser alguno de estos):
+screen /dev/ttyUSB0 57600
+screen /dev/ttyACM0 57600
